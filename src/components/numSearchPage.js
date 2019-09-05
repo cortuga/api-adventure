@@ -22,7 +22,7 @@ const NumSearchPage = () => {
 
     // console.log(response.data[0].en) //correct path
     console.log(response)
-    // setQuote(response)
+    setQuote(response)
   }
 
   // const randomQuote = () => {}
@@ -40,9 +40,13 @@ const NumSearchPage = () => {
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
         ></input>
-        <button onClick={fetchData}>Enter</button>
-        <h2>{quote}</h2>
-        <button>Random Quote!</button>
+        <button type='submit' onClick={fetchData}>
+          Enter
+        </button>
+        <h2>{quote.data}</h2>
+        <section>
+          <button>Random Quote!</button>
+        </section>
       </section>
       <footer>Made at SDG</footer>
     </div>
