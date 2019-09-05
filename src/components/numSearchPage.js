@@ -3,7 +3,7 @@ import axios from "axios"
 
 const NumSearchPage = () => {
   // creates state for getters and setters
-  const [quote, setQuote] = useState([0])
+  const [quote, setQuote] = useState([])
   const [searchTerm, setSearchTerm] = useState([])
 
   // useEffect(() => {
@@ -25,12 +25,14 @@ const NumSearchPage = () => {
     setQuote(response)
   }
 
-  // const randomQuote = () => {}
+  // const randomQuote = () => {
+  // Math.ceil(Math.random() * 500)
+  // }
 
   return (
     <div>
       <header>
-        <h1>Ontological Quote of the Day</h1>
+        <h1>Number Ontology</h1>
       </header>
       <section>
         <input
